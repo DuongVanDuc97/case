@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container" style="height: 1000px">
+    <div style="width: 100%; text-align: center; color: white">
+        <h2>PRODUCT MANAGEMENT</h2>
+    </div>
+    <div class="input-section">
+        <div class="section-heading">
+            Enter product information:
+        </div>
+        <div>
+            <div class="form-section">
+                <label class="form-label">Product Name:</label>
+                <input class="form-input" type="text" name="name" id="product-name" placeholder="Enter product name">
+            </div>
+            <div class="form-section">
+                <label class="form-label">Price (per kilogram):</label>
+                <input class="form-input" type="number" name="price" id="product-price" placeholder="Enter price">
+            </div>
+            <div class="form-section">
+                <label class="form-label">Quantity (kilogram):</label>
+                <input class="form-input" type="number" name="quantity" id="product-quantity" placeholder="Enter quantity">
+            </div>
+            <div class="form-section">
+                <button class="btn" id="add-product-btn" onclick="addProduct()">Add</button>
+                <button class="btn" id="edit-product-btn" onclick="editProduct()">Edit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="list-section">
+        <div class="list-heading">
+            Product List:
+        </div>
+        <div>
+            <div>
+                <input type="text" name="product-search" id="product-search" placeholder="Search product">
+                <button onclick="searchProduct()">Search product</button>
+            </div>
+            <table class="table-list">
+                <thead>
+                <tr>
+                    <td>No</td>
+                    <td>Product name</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td></td>
+                </tr>
+                </thead>
+                <tbody id="product-list">
+
+                </tbody>
+            </table>
+        </div>
+        <div id="total-product"></div>
+    </div>
+
+</div>
+<script src="main.js"></script>
+</body>
+</html>
